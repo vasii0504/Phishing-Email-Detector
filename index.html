@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Email Detector</title>  
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Phishing Email Detector</h1>
+        <form id="emailForm">
+            <label for="emailId">Email ID:</label>
+            <input type="email" placeholder="abc@gmail.com" id="emailId" required>
+
+            <label for="emailBody">Email Body:</label>
+            <textarea id="emailBody" placeholder="Text.." rows="10" required></textarea>
+
+            <label for="emailUrl">Attachments (URL):</label>
+            <input type="url" placeholder="Give a URL (optional)" id="emailUrl">
+
+            <label for="emailFiles">File Attachments:</label>
+            <input type="file" multiple id="emailFiles">
+
+
+            <div class="button-container">
+                <button type="submit">Search</button>
+            </div>
+            <div class="agreement-text">
+                <p>
+                    By submitting data above, you are agreeing to our 
+                    <a href="terms-of-service.html" target="_blank">Terms of Service</a> 
+                    and 
+                    <a href="privacy-notice.html" target="_blank">Privacy Notice</a>, 
+                    and to the sharing of your Sample submission with the security community. 
+                    Please do not submit any personal information; we are not responsible for the contents of your submission. 
+                    <a href="learn-more.html" target="_blank">Learn more</a>.
+                </p>
+            </div>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Email Details </h2>
+            <p><strong>Email ID:</strong> <span id="displayEmailId"></span></p>
+            <p><strong>Email Body:</strong> <span id="displayEmailBody"></span></p>
+            <p><strong>Attachments:</strong> <span id="displayEmailAttachments"></span></p>
+            <p><strong>URL:</strong> <span id="displayEmailUrl"></span></p>
+            <p><strong>Files:</strong> <ul id="displayEmailFiles"></ul></p>
+
+            <h3>Is this Mail phishing?</h3>
+            <p id="phishingResult"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

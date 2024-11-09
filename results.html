@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Detection Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Email Detection Results</h1>
+        <div id="result" class="result">
+            <h2>Email Details</h2>
+            <p><strong>Email ID:</strong> <span id="displayEmailId"></span></p>
+            <p><strong>Email Body:</strong> <span id="displayEmailBody"></span></p>
+            <p><strong>URL:</strong> <span id="displayEmailUrl"></span></p>
+            <p><strong>Files:</strong> <ul id="displayEmailFiles"></ul></p>
+
+            <h3>Is this Mail phishing?</h3>
+            <p id="phishingResult"></p>
+        </div>
+        <div class="button-container">
+            <button id="backButton">Go Back</button>
+        </div>
+    </div>
+
+    <script src="results.js"></script>
+</body>
+</html>
